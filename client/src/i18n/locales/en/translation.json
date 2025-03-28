@@ -1,0 +1,47 @@
+{
+  "badge": "We're live!",
+  "title": "FoodNav",
+  "description": "Need food assistance? Our AI-powered assistant helps you find nearby food resources based on your location, needs, and availability. Access it via web, mobile, SMS, or voice. It's quick, private, and easy to use.",
+  "buttons": {
+    "call": "Jump on a call",
+    "viewMap": "View Map",
+    "callNow": "Call Now",
+    "contact": "Contact"
+  },
+  "nav": {
+    "home": "Home",
+    "product": "Product",
+    "productDescription": "Find food in seconds",
+    "product_items": {
+      "map": "Full Map",
+      "liveHelp": "Live Help Map",
+      "volunteer": "Volunteer",
+      "donate": "Donate"
+    }
+  },
+  "contact": {
+    "badge": "Contact",
+    "title": "Get in touch!",
+    "description": "Our AI assistant helps you find food resources easily on any device, with voice, text, and visual options for everyone.",
+    "call": {
+      "title": "Call Anytime",
+      "phone": "+1 (234) 567-8900"
+    },
+    "message": {
+      "title": "Message Now",
+      "phone": "+1 (234) 567-8900"
+    },
+    "map": {
+      "title": "Find on Map",
+      "button": "View Map"
+    },
+    "form": {
+      "title": "Subscribe",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "phone": "Phone number",
+      "button": "Subscribe for Updates"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "badge": "¡Estamos en vivo!",
+  "title": "FoodNav",
+  "description": "¿Necesitas ayuda alimentaria? Nuestro asistente con inteligencia artificial te ayuda a encontrar recursos de comida cerca, según tu ubicación, necesidades y disponibilidad. Accede por internet, celular, SMS o con tu voz. ¡Es rápido, privado y fácil de usar!",
+  "buttons": {
+    "call": "Únete a una llamada",
+    "viewMap": "Ver Mapa",
+    "callNow": "Llama Ahora",
+    "contact": "Contacto"
+  },
+  "nav": {
+    "home": "Inicio",
+    "product": "Producto",
+    "productDescription": "Encuentra comida en segundos",
+    "product_items": {
+      "map": "Mapa Completo",
+      "liveHelp": "Mapa de Ayuda en Vivo",
+      "volunteer": "Voluntariado",
+      "donate": "Donar"
+    }
+  },
+  "contact": {
+    "badge": "Contacto",
+    "title": "¡Ponte en contacto!",
+    "description": "Nuestro asistente con inteligencia artificial te ayuda a encontrar recursos de comida fácilmente en cualquier dispositivo, con opciones de voz, texto y visuales para todos.",
+    "call": {
+      "title": "Llama Cuando Quieras",
+      "phone": "+1 (234) 567-8900"
+    },
+    "message": {
+      "title": "Envía Mensaje Ahora",
+      "phone": "+1 (234) 567-8900"
+    },
+    "map": {
+      "title": "Encuentra en el Mapa",
+      "button": "Ver Mapa"
+    },
+    "form": {
+      "title": "Suscríbete",
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "email": "Correo electrónico",
+      "phone": "Número de teléfono",
+      "button": "Suscríbete para recibir actualizaciones"
+    }
+  }
+}
