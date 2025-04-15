@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+.env
+
+# SQLite database file
+food_pantry.db
+
+# Data files: Not sure if I am allowed to share these files, so I will ignore them for the MVP
+data/
