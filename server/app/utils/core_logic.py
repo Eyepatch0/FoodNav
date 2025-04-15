@@ -104,8 +104,10 @@ def core_filter(
             # Filter partners by day and time
             partner_filtered = partner_df.filter(
                 (pl.col("Day of Week") == day)
-                & (pl.col("Starting Time") <= end_time)
-                & (pl.col("Ending Time") >= start_time)
+                & (
+                    (pl.col("Starting Time") <= end_time)
+                    | (pl.col("Ending Time") >= start_time)
+                )
             )
 
             if dietary_lower != "none":
@@ -151,14 +153,18 @@ def core_filter(
             # Use both MarketHours and PartnerHours records
             market_filtered = market_df.filter(
                 (pl.col("Day of Week") == day)
-                & (pl.col("Starting Time") <= end_time)
-                & (pl.col("Ending Time") >= start_time)
+                & (
+                    (pl.col("Starting Time") <= end_time)
+                    | (pl.col("Ending Time") >= start_time)
+                )
             )
 
             partner_filtered = partner_df.filter(
                 (pl.col("Day of Week") == day)
-                & (pl.col("Starting Time") <= end_time)
-                & (pl.col("Ending Time") >= start_time)
+                & (
+                    (pl.col("Starting Time") <= end_time)
+                    | (pl.col("Ending Time") >= start_time)
+                )
             )
 
             if dietary_lower != "none":

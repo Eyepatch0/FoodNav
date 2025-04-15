@@ -32,9 +32,24 @@ def get_preferred_date(data) -> str:
         return day_name
     else:
         other_preferred_day = data.get("specific_day", "")
-        # ! Dialogflow limitation
+        # Handle Dialogflow template expressions
         if "$" in other_preferred_day:
-            return "Invalid date"
+            # If it contains template variables, default to today
+            date_obj = datetime.now()
+            day_name = date_obj.strftime("%A")
+            return day_name
+        elif "||" in other_preferred_day:
+            parts = other_preferred_day.split("||")
+            date_str = parts[0].strip()
+            try:
+                date_obj = datetime.strptime(date_str, "%Y-%m-%d")
+                day_name = date_obj.strftime("%A")
+                return day_name
+            except ValueError:
+                # If parsing fails, default to today
+                date_obj = datetime.now()
+                day_name = date_obj.strftime("%A")
+                return day_name
         else:
             try:
                 date_obj = datetime.strptime(other_preferred_day, "%Y-%m-%d")
