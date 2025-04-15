@@ -2,6 +2,7 @@ from fastapi import FastAPI, Depends, Request
 from sqlalchemy.orm import Session
 from .database import get_db
 import traceback
+import polars as pl
 
 from .utils.extract_utils import (
     get_location_string,
@@ -19,6 +20,29 @@ app = FastAPI()
 @app.get("/")
 async def root():
     return {"message": "Welcome to the Food Nav API!"}
+
+
+@app.get("/resources")
+async def get_resources(db: Session = Depends(get_db)):
+    try:
+        market_hours = pl.read_database(
+            query="SELECT * FROM markets_hours", connection=db.bind
+        ).to_dicts()
+
+        partner_hours = pl.read_database(
+            query="SELECT * FROM partners_hours", connection=db.bind
+        ).to_dicts()
+
+        return {
+            "status": "success",
+            "market_hours": market_hours,
+            "partner_hours": partner_hours,
+        }
+
+    except Exception as e:
+        print(f"Error fetching resources: {e}")
+        traceback.print_exc()
+        return {"status": "error", "message": "Internal server error"}
 
 
 @app.post("/results")
