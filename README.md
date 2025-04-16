@@ -82,4 +82,5 @@ Our data is from [Capital Area Food Bank](https://www.capitalareafoodbank.org/),
 
 - [Mohammed Syed](https://www.linkedin.com/in/syed-mohammed0/)
 
-- [Mohammed Ibrahim Ahmed](https://www.linkedin.com)
+- [Mohammed Ibrahim Ahmed](https://www.linkedin.com/in/ibrahim-ahmed-i0)
+
