@@ -114,7 +114,130 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
+
+.leaflet-container {
+  font-family: inherit;
+}
+
+.leaflet-popup-content-wrapper {
+  @apply bg-background text-foreground border rounded-lg shadow-lg;
+}
+
+.leaflet-popup-tip {
+  @apply bg-background;
+}
+
+.leaflet-control {
+  @apply shadow-none;
+}
+
+.leaflet-control-zoom {
+  @apply border rounded-lg overflow-hidden;
+}
+
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+  @apply bg-background text-foreground hover:bg-accent hover:text-accent-foreground border-0 w-8 h-8 leading-8;
+}
+
+.custom-icon {
+  background: none;
+  border: none;
+}
+
+.custom-icon div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.custom-icon div:hover {
+  transform: scale(1.1);
+}
+
+.custom-marker {
+  background: none;
+  border: none;
+}
+
+.custom-marker div {
+  transform-origin: center;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease;
+}
+
+.custom-marker div:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.search-results-dropdown {
+  @apply bg-background border rounded-lg shadow-lg;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.search-result-item {
+  @apply px-4 py-2 hover:bg-accent cursor-pointer flex items-center gap-2;
+}
+
+.search-result-item:not(:last-child) {
+  @apply border-b;
+}
+
+.transport-mode-active {
+  @apply bg-primary text-primary-foreground;
+}
+
+.legend-item {
+  @apply flex items-center gap-2 text-sm;
+}
+
+.legend-dot {
+  @apply w-3 h-3 rounded-full;
+}
+
+/* Custom Popup Styles */
+.custom-popup {
+    @apply p-4 max-w-sm;
+}
+
+.custom-popup-header {
+    @apply flex items-center gap-2 mb-2;
+}
+
+.custom-popup-title {
+    @apply font-medium text-lg text-primary;
+}
+
+.custom-popup-address {
+    @apply text-sm text-muted-foreground mb-3 flex items-start gap-2;
+}
+
+.custom-popup-schedule {
+    @apply mt-3 flex flex-col gap-1.5;
+}
+
+.custom-popup-time {
+    @apply text-sm flex items-center gap-2 text-muted-foreground;
+}
+
+.custom-popup-contact {
+    @apply mt-2 flex items-center gap-2 text-sm text-blue-500 hover:text-blue-600;
+}
+/* Add to your global CSS file */
+.filter-active {
+  @apply bg-primary text-primary-foreground;
+}
+
+.filter-icon {
+  @apply transition-colors;
+}
+
+.filter-button:hover .filter-icon {
+  @apply text-primary;
