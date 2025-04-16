@@ -83,8 +83,17 @@ export const Header = () => {
                                 {item.description}
                               </p>
                             </div>
-                            <Button size="sm" className="mt-10">
-                              {t("buttons.callNow")}
+                            <Button
+                              size="sm"
+                              className="mt-10"
+                              onClick={() =>
+                                (window.location.href = "tel:3239189368")
+                              }
+                              asChild
+                            >
+                              <a href="tel:3239189368">
+                                {t("buttons.callNow")}
+                              </a>
                             </Button>
                           </div>
                           <div className="flex flex-col text-sm h-full justify-end">

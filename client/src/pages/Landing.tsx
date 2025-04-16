@@ -27,8 +27,12 @@ export const Landing = () => {
               size="lg"
               className="gap-4 px-6 py-4 font-semibold"
               variant="outline"
+              onClick={() => (window.location.href = "tel:3239189368")}
+              asChild
             >
-              {t("buttons.call")} <PhoneCall className="w-4 h-4" />
+              <a href="tel:3239189368">
+                {t("buttons.call")} <PhoneCall className="w-4 h-4" />
+              </a>
             </Button>
             <Button size="lg" className="gap-4 px-6 py-4 font-semibold" asChild>
               <Link to="/live-map">
