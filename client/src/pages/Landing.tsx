@@ -2,6 +2,7 @@ import { Map, PhoneCall } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export const Landing = () => {
   const { t } = useTranslation();
@@ -29,8 +30,10 @@ export const Landing = () => {
             >
               {t("buttons.call")} <PhoneCall className="w-4 h-4" />
             </Button>
-            <Button size="lg" className="gap-4 px-6 py-4 font-semibold">
-              {t("buttons.viewMap")} <Map className="w-6 h-6" />
+            <Button size="lg" className="gap-4 px-6 py-4 font-semibold" asChild>
+              <Link to="/live-map">
+                {t("buttons.viewMap")} <Map className="w-6 h-6" />
+              </Link>
             </Button>
           </div>
         </div>

@@ -118,6 +118,14 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  body, html {
+    @apply m-0 p-0 min-h-screen overflow-x-hidden;
+  }
+
+  #root {
+    @apply flex flex-col min-h-screen;
+  }
 }
 
 .leaflet-container {
@@ -241,3 +249,4 @@
 
 .filter-button:hover .filter-icon {
   @apply text-primary;
+}
