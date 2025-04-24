@@ -72,6 +72,8 @@ Our data is from [Capital Area Food Bank](https://www.capitalareafoodbank.org/),
 
 ## Future Improvements:
 
+- Add accurate location collection for the Spanish agent similar to the English agent.
+
 - Add more languages to the agent's capabilities.
 
 - Improve the interactive map and add support for transportation options with focus on public transportation.
@@ -83,4 +85,3 @@ Our data is from [Capital Area Food Bank](https://www.capitalareafoodbank.org/),
 - [Mohammed Syed](https://www.linkedin.com/in/syed-mohammed0/)
 
 - [Mohammed Ibrahim Ahmed](https://www.linkedin.com/in/ibrahim-ahmed-i0)
-

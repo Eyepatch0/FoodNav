@@ -88,7 +88,6 @@ def get_time_range(data):
 
 
 def process_dietary_needs(dietary_needs):
-    """Process dietary needs to return a string that can be used by core_filter."""
     if isinstance(dietary_needs, dict):
         return dietary_needs.get("original", "").strip()
     else:
@@ -96,7 +95,6 @@ def process_dietary_needs(dietary_needs):
 
 
 def process_boolean_value(value):
-    """Convert string boolean values to actual booleans."""
     if isinstance(value, str):
         return value.lower() == "true"
     return bool(value)
