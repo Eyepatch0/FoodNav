@@ -3,6 +3,7 @@ import polars as pl
 from geopy.distance import geodesic
 from typing import List, Dict, Any
 from sqlalchemy.orm import Session
+from app.utils.geocode_utils import transit_route_link
 
 
 def core_filter(
@@ -227,5 +228,14 @@ def core_filter(
             combined_list.sort(key=lambda x: x.get("distance", float("inf")))
 
             combined_list = combined_list[:3]
+
+            for item in combined_list:
+                if item.get("coordinates"):
+                    try:
+                        coords = json.loads(str(item["coordinates"]))
+                        dest = (coords.get("lat"), coords.get("lng"))
+                        item["route"] = transit_route_link(reference_point, dest)
+                    except (json.JSONDecodeError, TypeError, ValueError):
+                        item["route"] = None
 
             return combined_list

@@ -2,6 +2,7 @@ import time
 import json
 import os
 from typing import Optional, Tuple
+from urllib.parse import quote_plus
 
 from dotenv import load_dotenv
 from googlemaps import Client
@@ -68,3 +69,21 @@ def add_coordinates_to_tables(dataframes: dict) -> dict:
                 )
 
     return dataframes
+
+
+Coordinate = Tuple[float, float]
+
+
+def transit_route_link(
+    origin: Coordinate,
+    destination: Coordinate,
+) -> str:
+    # Basic range checks (optional, but helps catch reversed lat/lon)
+    for lat, lon in (origin, destination):
+        if not (-90.0 <= lat <= 90.0 and -180.0 <= lon <= 180.0):
+            raise ValueError(f"Invalid coordinate: ({lat}, {lon})")
+
+    base = "https://www.google.com/maps/dir/?api=1"
+    origin_param = quote_plus(f"{origin[0]},{origin[1]}")
+    dest_param = quote_plus(f"{destination[0]},{destination[1]}")
+    return f"{base}&origin={origin_param}&destination={dest_param}&travelmode=transit"
