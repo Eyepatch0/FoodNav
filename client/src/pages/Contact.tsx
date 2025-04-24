@@ -56,6 +56,14 @@ export const Contact = () => {
                 </Link>
               </div>
             </div>
+            <div className="flex flex-row gap-6 items-start text-left">
+              <Check className="w-4 h-4 mt-2 text-primary" />
+              <div className="flex flex-col gap-1">
+                <Link to="https://forms.gle/ZqGmQuiavgcHEo7e7" target="_blank">
+                  <p>{t("contact.feedback_form")}</p>
+                </Link>
+              </div>
+            </div>
           </div>
 
           <div className="justify-center flex items-center">

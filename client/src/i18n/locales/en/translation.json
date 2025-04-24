@@ -35,6 +35,8 @@
       "title": "Find on Map",
       "button": "View Map"
     },
+
+    "feedback_form": "Fill our feedback form if you have recently used our service. We would love to hear from you!",
     "form": {
       "title": "Subscribe",
       "firstName": "First name",
